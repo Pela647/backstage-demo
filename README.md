@@ -23,3 +23,17 @@ export MAIN_LOCATIONS_FILE="https://github.com/Pela647/backstage-templates/blob/
 # Required for nodejs >= v20
 export NODE_OPTIONS=--no-node-snapshot
 ```
+
+### How to Create Docker Image
+```
+yarn install --immutable
+
+# tsc outputs type definitions to dist-types/ in the repo root, which are then consumed by the build
+yarn tsc
+
+# Build the backend, which bundles it all up into the packages/backend/dist folder.
+yarn build:backend
+
+# from root directory
+docker image build . -f packages/backend/Dockerfile --tag backstage
+```
