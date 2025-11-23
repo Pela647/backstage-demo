@@ -22,6 +22,12 @@ export MAIN_LOCATIONS_FILE="https://github.com/Pela647/backstage-templates/blob/
 
 # Required for nodejs >= v20
 export NODE_OPTIONS=--no-node-snapshot
+
+# POSTGRES_HOST = DB service name
+export POSTGRES_HOST=psql
+export POSTGRES_PORT=pela
+export POSTGRES_USER=pela
+export POSTGRES_PASSWORD=5432
 ```
 
 ### How to Create Docker Image
